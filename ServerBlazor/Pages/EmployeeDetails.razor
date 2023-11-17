@@ -1,0 +1,30 @@
+﻿@page "/employeedetails/{id}"
+@inherits EmployeeDeatilsBase;
+<h3>EmployeeDetails</h3>
+
+@if (employee == null)
+{
+    <div class="spinner-border"></div>
+}
+else
+{
+
+   
+
+
+        <div class="card" style="width: 18rem;">
+ 
+            <div class="card-body">
+            <h5 class="card-title">@employee.Name</h5>
+            <p class="card-text">@employee.Id</p>
+            <a href="#" class="btn btn-primary">@employee.City</a>
+            </div>
+        </div>
+
+    
+}
+
+
+@code {
+
+}

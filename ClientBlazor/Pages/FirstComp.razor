@@ -1,0 +1,19 @@
+﻿@page "/firstcomp"
+@inherits FirstBase;
+<h3>Empolyee Name List</h3>
+@if (Employees==null)
+{
+    <div class="spinner-border"></div>
+}
+else
+{
+    <ul>
+        @foreach (var item in Employees)
+        {
+                <li>@item.Id</li>
+                <li>@item.Name</li>
+                <li>@item.City</li>
+        }
+    </ul>
+
+}

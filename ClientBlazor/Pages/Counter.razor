@@ -1,0 +1,12 @@
+﻿@page "/counter"
+@inherits CounterBase
+<PageTitle>Counter</PageTitle>
+
+<h1>Counter</h1>
+<p>My Name is: @name</p>
+<p role="status">Current count: @currentCount</p>
+<p>My Name is: @Dename</p>
+<p role="status">currentDeCount count: @currentDeCount</p>
+
+<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+<button class="btn btn-primary" @onclick="DecrementCount">Click me</button>

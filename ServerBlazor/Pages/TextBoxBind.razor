@@ -1,0 +1,11 @@
+﻿@page "/textbox/{id}"
+@inherits TextBoxBindBase
+<h3>TextBoxBind</h3>
+
+<EditForm Model="@employee">
+
+    <label for="name">
+        <InputText id="name" @bind-Value="employee.Name"/>
+    </label>
+
+</EditForm>

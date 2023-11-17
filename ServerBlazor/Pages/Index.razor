@@ -1,0 +1,24 @@
+﻿@page "/page"
+
+@inherits IndexBase;
+
+
+<h3>@Cordinates</h3>
+<div>
+    <button @onmousemove="@mousemove" @onclick="@changeText" class="@Changecolor">@TextChange</button>
+
+    <div>One Way Data Binding: @Name</div>
+    <div><input type="text" value="@Name" /> </div>
+
+
+
+    <div>Two Way Data Binding:<br/>
+        <input type="text" @bind="Name" @bind:event="oninput"/>
+        <input type="text" @bind="colour" @bind:event="oninput" />
+    </div>
+
+    <div @bind-style="colour" @bind-style:event="onchnage">
+        I want to change Backgound color  
+    </div>
+</div>
+

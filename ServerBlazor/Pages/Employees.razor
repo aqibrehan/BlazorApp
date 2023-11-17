@@ -1,0 +1,27 @@
+﻿@page "/employees"
+
+@inherits EmployeeBase;
+
+<h3>Employee</h3>
+@if (EmployeesList == null)
+{
+    <div class="spinner-border"></div>
+}
+else
+{
+
+        @foreach (var item in EmployeesList)
+        {
+
+        <EmployeeComponent employee="@item"></EmployeeComponent>
+
+
+        }
+}
+
+@*@code {
+    private Employee[]? EmployeesList;
+
+    protected override async Task OnInitializedAsync() =>
+        EmployeesList = await Http.GetFromJsonAsync<Employee[]>("https://localhost:7128/api/Employee");
+}*@

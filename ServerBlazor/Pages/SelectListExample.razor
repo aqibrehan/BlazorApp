@@ -1,0 +1,19 @@
+﻿@page "/selectList"
+@inherits SelectListBase
+
+<h3>SelectLIstExample</h3>
+@if (EmployeeList!=null)
+{
+    <EditForm Model="@EmployeeList">
+        <InputSelect id="firststring" @bind-Value="SelectedValue">
+            <option value=0>Selecte Employee</option>
+
+            @foreach (var item in EmployeeList)
+            {
+                    <option value="@item.Id">@item.Name</option>
+            }
+
+
+        </InputSelect>
+    </EditForm>
+}
